@@ -44,7 +44,7 @@ corelinux_tcz=$corelinux_base/tcz
 # Configure / autoconf
 install_package $corelinux_tcz/pkg-config.tcz
 install_package $corelinux_tcz/popt.tcz # <
-# install_package $corelinux_tcz/glib2.tcz # <
+install_package $corelinux_tcz/glib2.tcz # <
 install_package $corelinux_tcz/libffi.tcz # <<
 install_package $corelinux_tcz/autoconf.tcz
 install_package $corelinux_tcz/perl_xml_parser.tcz # <
@@ -80,6 +80,8 @@ install_package $corelinux_tcz/screen.tcz
 # Git
 install_package $corelinux_tcz/git.tcz
 install_package $corelinux_tcz/openssl-1.0.0.tcz # <
+
+install_package www.tinkerpal.org/tinkerpal.tcz 
 
 # Repackage ISO
 echo "Repackaging"
