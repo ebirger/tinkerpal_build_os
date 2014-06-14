@@ -42,22 +42,10 @@ echo "--------------------------"
 # each '<' denotes a dependency lever to the upper packages
 corelinux_tcz=$corelinux_base/tcz
 # Configure / autoconf
-install_package $corelinux_tcz/pkg-config.tcz
-install_package $corelinux_tcz/popt.tcz # <
-install_package $corelinux_tcz/glib2.tcz # <
-install_package $corelinux_tcz/libffi.tcz # <<
-install_package $corelinux_tcz/autoconf.tcz
-install_package $corelinux_tcz/perl_xml_parser.tcz # <
-install_package $corelinux_tcz/expat2.tcz # <<
-install_package $corelinux_tcz/perl5.tcz # <<
-install_package $corelinux_tcz/automake.tcz
 install_package $corelinux_tcz/m4.tcz
-install_package $corelinux_tcz/autogen.tcz
-install_package $corelinux_tcz/libtool-dev.tcz
-install_package $corelinux_tcz/libtool.tcz # <
-install_package $corelinux_tcz/libltdl.tcz # <<
 install_package $corelinux_tcz/sed.tcz
 install_package $corelinux_tcz/bison.tcz
+install_package $corelinux_tcz/flex.tcz
 # Build
 install_package $corelinux_tcz/gcc-3.3.6.tcz
 install_package $corelinux_tcz/gcc.tcz
@@ -80,8 +68,6 @@ install_package $corelinux_tcz/screen.tcz
 # Git
 install_package $corelinux_tcz/git.tcz
 install_package $corelinux_tcz/openssl-1.0.0.tcz # <
-
-install_package www.tinkerpal.org/tinkerpal.tcz 
 
 # Repackage ISO
 echo "Repackaging"
