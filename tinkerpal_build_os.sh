@@ -41,7 +41,11 @@ echo "--------------------------"
 
 # each '<' denotes a dependency lever to the upper packages
 corelinux_tcz=$corelinux_base/tcz
-# Configure / autoconf
+# Configure
+install_package $corelinux_tcz/pkg-config.tcz
+install_package $corelinux_tcz/popt.tcz # <
+install_package $corelinux_tcz/glib2.tcz # <
+install_package $corelinux_tcz/libffi.tcz # <<
 install_package $corelinux_tcz/m4.tcz
 install_package $corelinux_tcz/sed.tcz
 install_package $corelinux_tcz/bison.tcz
@@ -68,6 +72,9 @@ install_package $corelinux_tcz/screen.tcz
 # Git
 install_package $corelinux_tcz/git.tcz
 install_package $corelinux_tcz/openssl-1.0.0.tcz # <
+# Burn
+install_package $corelinux_tcz/libusb-dev.tcz
+install_package $corelinux_tcz/libusb.tcz
 
 # Repackage ISO
 echo "Repackaging"
